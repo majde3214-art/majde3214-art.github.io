@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Majdy Othman – مجدي عثمان</title>
+<meta name="description" content="مجدي عثمان: برمجة PLC وصيانة ماكينات التغليف وتقارير الإنتاج على Excel وتطبيقات لمصانع الأغذية. Majdy Othman: PLC programming, packaging machine maintenance, Excel production reports and custom apps for food factories.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Majdy Othman – مجدي عثمان">
+<meta property="og:description" content="برمجة PLC وتطبيقات مخازن وتقارير إنتاج لمصانع الأغذية. PLC programming and inventory apps for food factories.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Majdy Othman","alternateName":"مجدي عثمان","email":"majde3214@gmail.com","knowsAbout":["PLC programming","Packaging machine maintenance","Excel production reports","Inventory apps","برمجة PLC","صيانة ماكينات التغليف","تقارير الإنتاج"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Cormorant+Garamond:wght@500;700&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#eef1f4; --ink:#14202b; --mute:#51606e; --line:#c4cdd6; --blue:#1f4fd8; --live:#e59a00; --wire:#8b99a7; --panel:#fff;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#121a22;--ink:#e8edf2;--mute:#9fadba;--line:#2c3945;--blue:#7da2ff;--live:#ffb81f;--wire:#5d6d7c;--panel:#1a242e}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#121a22;--ink:#e8edf2;--mute:#9fadba;--line:#2c3945;--blue:#7da2ff;--live:#ffb81f;--wire:#5d6d7c;--panel:#1a242e}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif;line-height:1.75;font-size:17px}
+html[lang="ar"] .en,html[lang="en"] .ar{display:none}
+.wrap{max-width:900px;margin-inline:auto;padding:0 22px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.mark{font-weight:700;letter-spacing:.01em}
+button{font:inherit;cursor:pointer}
+.lang{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 14px}
+.lang:hover{border-color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+h1{font-size:clamp(2.4rem,8vw,4.4rem);line-height:1.1;margin:36px 0 12px;font-weight:700}
+.tag{font-size:1.2rem;color:var(--mute);max-width:34ch;margin:0 0 28px}
+.rig{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 16px 14px}
+.rig svg{display:block;width:100%;height:auto}
+.wire{stroke:var(--wire);stroke-width:3;fill:none;transition:stroke .25s}
+.on .wire{stroke:var(--live)}
+.part{stroke:var(--ink);stroke-width:3;fill:none}
+.coil{fill:var(--panel);stroke:var(--ink);stroke-width:3;transition:fill .25s,stroke .25s}
+.on .coil{fill:var(--live);stroke:var(--live)}
+.seal{opacity:.25;transition:opacity .25s}
+.on .seal{opacity:1}
+svg text{fill:var(--ink);font-family:ui-monospace,Consolas,monospace;font-size:15px}
+.ctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.btn{border:1px solid var(--ink);background:var(--ink);color:var(--bg);border-radius:6px;padding:7px 22px;font-weight:600}
+.btn.alt{background:none;color:var(--ink)}
+.state{margin-inline-start:auto;color:var(--mute);font-size:.95rem}
+section{padding:56px 0 8px}
+h2{font-size:1.6rem;margin:0 0 18px}
+.row{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:8px 28px;padding:18px 0;border-top:1px solid var(--line)}
+.row h3{margin:0;font-size:1.08rem}
+.row p{margin:0;color:var(--mute);max-width:62ch}
+.stack{font-size:.9rem;color:var(--blue)}
+.cta{display:inline-block;margin-top:6px;background:var(--blue);color:#fff;text-decoration:none;border-radius:6px;padding:10px 26px;font-weight:600}
+html[data-theme="dark"] .cta,:root:not([data-theme="light"]) .cta{color:#0b1220}
+footer{padding:48px 0 40px;color:var(--mute);font-size:.9rem}
+@media (max-width:640px){.row{grid-template-columns:1fr}.state{margin-inline-start:0;width:100%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:root:root{--bg:#0a1019;--ink:#eae6dc;--mute:#a3acb7;--line:#26313f;--blue:#d4af5a;--live:#f5c25b;--wire:#4a5666;--panel:rgba(18,27,40,.7);color-scheme:dark}
+@media (prefers-color-scheme:light){:root:root{--bg:#f4f6f9;--ink:#101a27;--mute:#4d5a69;--line:#d3dae3;--blue:#8a6516;--live:#c98a00;--wire:#9aa7b5;--panel:rgba(255,255,255,.85);color-scheme:light}}
+body{background:radial-gradient(800px 420px at 85% -8%,rgba(212,175,90,.16),transparent 65%),radial-gradient(600px 400px at 5% 40%,rgba(212,175,90,.06),transparent 70%),var(--bg);font-size:17.5px}
+.wrap{max-width:960px}
+.mark{font-family:"Cormorant Garamond","Aref Ruqaa",serif;font-size:1.4rem;color:var(--blue)}
+h1,h2{font-family:"Cormorant Garamond","Aref Ruqaa",serif}
+h1{font-size:clamp(3rem,11vw,6rem);font-weight:700;line-height:1.05;margin:44px 0 14px}
+h1::after{content:"";display:block;width:84px;height:2px;margin-top:18px;background:linear-gradient(90deg,var(--blue),transparent)}
+html[dir="rtl"] h1::after{background:linear-gradient(270deg,var(--blue),transparent)}
+.tag{font-size:1.25rem;color:var(--ink);opacity:.85}
+.rig{background:var(--panel);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid color-mix(in srgb,var(--blue) 45%,var(--line));border-radius:14px;box-shadow:0 18px 50px -24px rgba(0,0,0,.6);transition:box-shadow .4s}
+.rig:has(.on){box-shadow:0 0 0 1px var(--blue),0 20px 70px -20px color-mix(in srgb,var(--live) 55%,transparent)}
+.on .coil{filter:drop-shadow(0 0 10px var(--live))}
+.on .wire{filter:drop-shadow(0 0 3px var(--live))}
+.btn{background:linear-gradient(135deg,#f0cf7a,#c9a24b);border-color:transparent;color:#1a1306}
+.btn.alt{background:none;color:var(--ink);border:1px solid var(--line)}
+h2{font-size:2.1rem;font-weight:700;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+html[dir="rtl"] h2::after{background:linear-gradient(270deg,var(--line),transparent)}
+section{padding-top:72px}
+.row{padding:22px 0;transition:border-color .25s}
+.row:hover{border-top-color:var(--blue)}
+.row h3{font-size:1.15rem;color:var(--blue)}
+.cta{background:linear-gradient(135deg,#f0cf7a,#c9a24b);color:#1a1306!important;padding:13px 34px;border-radius:999px;box-shadow:0 10px 30px -12px rgba(201,162,75,.7)}
+.lang{border-color:color-mix(in srgb,var(--blue) 50%,var(--line));color:var(--blue)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1,.tag,.rig{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.tag{animation-delay:.12s}.rig{animation-delay:.26s}
+@media (prefers-reduced-motion:reduce){h1,.tag,.rig{animation:none}}
+.ask{display:inline-block;margin-inline-start:12px;color:var(--blue);text-decoration:none;border-bottom:1px solid currentColor;font-size:.92rem;white-space:nowrap}
+.ask:hover{opacity:.8}
+.note{color:var(--mute);margin:0 0 16px;max-width:60ch}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:14px 0 4px}
+.bar i{display:block;height:100%;width:0;background:var(--live)}
+.tgl[aria-pressed="true"]{box-shadow:0 0 0 3px color-mix(in srgb,var(--live) 50%,transparent)}
+.lamp{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--wire);margin-inline-end:8px;vertical-align:-1px;transition:background .25s,box-shadow .25s}
+.lamp.on{background:var(--live);box-shadow:0 0 12px var(--live)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="mark">Majdy Othman</span>
+    <button class="lang" id="lang" type="button" aria-label="Switch language / تغيير اللغة">English</button>
+  </header>
+
+  <main>
+    <h1><span class="ar">مجدي عثمان</span><span class="en">Majdy Othman</span></h1>
+    <p class="tag">
+      <span class="ar">برمجة PLC وتطبيقات مخازن لمصانع الأغذية.</span>
+      <span class="en">PLC programming and inventory apps for food factories.</span>
+    </p>
+
+    <div class="rig" id="rig">
+      <div dir="ltr">
+        <svg id="lad" viewBox="0 0 640 210" role="img" aria-label="Ladder logic: Start latches the Motor, Stop releases it">
+          <path class="wire" d="M20 20V190M620 20V190"/>
+          <path class="wire" d="M20 70H100M130 70H190M190 70H250M280 70H500M20 160H100M130 160H190M190 70V160"/>
+          <path class="part" d="M100 55V85M130 55V85"/>
+          <path class="part" d="M250 55V85M280 55V85M244 90L286 50"/>
+          <g class="seal"><path class="part" d="M100 145V175M130 145V175"/></g>
+          <path class="wire" d="M500 70H520M568 70H620"/>
+          <circle class="coil" cx="544" cy="70" r="24"/>
+          <text x="96" y="42">Start</text>
+          <text x="248" y="42">Stop</text>
+          <text x="96" y="198">Motor</text>
+          <text x="512" y="116">Motor</text>
+        </svg>
+      </div>
+      <div class="ctl">
+        <button class="btn" id="start" type="button"><span class="ar">تشغيل</span><span class="en">Start</span></button>
+        <button class="btn alt" id="stop" type="button"><span class="ar">إيقاف</span><span class="en">Stop</span></button>
+        <span class="state" id="state" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <section id="demo">
+      <h2><span class="ar">جرّب مؤقتاً</span><span class="en">Try a timer</span></h2>
+      <p class="note"><span class="ar">هذا منطق ماكينة التغليف عندي: إشارة الحساس يجب أن تستمر ثانيتين لتبدأ الماكينة، وتغيب ثانيتين لتتوقف.</span><span class="en">This is the logic from my packaging machine: the sensor signal must last two seconds to start the machine, and drop for two seconds to stop it.</span></p>
+      <div class="rig" style="animation:none">
+        <div class="ctl">
+          <button class="btn tgl" id="sens" type="button" aria-pressed="false"><span class="ar">إشارة الحساس</span><span class="en">Sensor signal</span></button>
+          <span class="state" style="margin-inline-start:auto"><i class="lamp" id="lamp"></i><span id="dstate" aria-live="polite"></span></span>
+        </div>
+        <div class="bar"><i></i></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2><span class="ar">ما أقدّمه</span><span class="en">What I do</span></h2>
+      <div class="row">
+        <h3><span class="ar">برمجة PLC</span><span class="en">PLC programming</span></h3>
+        <p><span class="ar">منطق السلّم لخطوط التغليف والتعبئة والصب، يُختبر في المحاكاة قبل أن يلمس الماكينة.</span><span class="en">Ladder logic for packaging, filling and moulding lines, tested in simulation before it touches the machine.</span> <a class="ask" href="#" data-ar="برمجة PLC" data-en="PLC programming"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تطبيقات المخازن والطلبات</span><span class="en">Inventory and request apps</span></h3>
+        <p><span class="ar">تطبيقات جوال بواجهة عربية للمخزون وطلبات الشراء وحركة المواد، مع رموز QR.</span><span class="en">Arabic mobile apps for stock, purchase requests and material movements, with QR codes.</span> <a class="ask" href="#" data-ar="تطبيقات المخازن والطلبات" data-en="Inventory and request apps"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تحسين خطوط الإنتاج</span><span class="en">Line improvements</span></h3>
+        <p><span class="ar">حساسات ومؤقتات وحالات أعطال تمنع المشاكل الصغيرة من إيقاف الخط.</span><span class="en">Sensors, delays and fault states that keep small problems from stopping the line.</span> <a class="ask" href="#" data-ar="تحسين خطوط الإنتاج" data-en="Line improvements"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تطبيقات حسب احتياج شركتك</span><span class="en">Custom apps for your company</span></h3>
+        <p><span class="ar">أبني تطبيقات جوال لكل ما تحتاجه شركتك: مخازن، طلبات، متابعة إنتاج، وغيرها، بواجهة عربية.</span><span class="en">I build mobile apps for whatever your company needs: stock, requests, production tracking and more, with an Arabic interface.</span> <a class="ask" href="#" data-ar="تطبيقات حسب احتياج الشركة" data-en="Custom apps"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تقارير الإنتاج على Excel</span><span class="en">Production reports in Excel</span></h3>
+        <p><span class="ar">إنشاء تقارير لكل ما يخص الإنتاج على Excel: الكميات والورديات والهدر والأعطال، بشكل واضح وجاهز للإدارة.</span><span class="en">Excel reports for everything production-related: output, shifts, waste and downtime, clear and ready for management.</span> <a class="ask" href="#" data-ar="تقارير الإنتاج على Excel" data-en="Production reports in Excel"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">صيانة ماكينات التغليف</span><span class="en">Packaging machine maintenance</span></h3>
+        <p><span class="ar">صيانة دورية وإصلاح أعطال ماكينات التغليف للحفاظ على استمرار الإنتاج.</span><span class="en">Routine maintenance and fault repair for packaging machines to keep production running.</span> <a class="ask" href="#" data-ar="صيانة ماكينات التغليف" data-en="Packaging machine maintenance"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تركيب الحصيرة الغطاسة</span><span class="en">Dipping mat installation</span></h3>
+        <p><span class="ar">تركيب الحصيرة الغطاسة وضبطها على الخط.</span><span class="en">Installing and adjusting the dipping mat on the line.</span> <a class="ask" href="#" data-ar="تركيب الحصيرة الغطاسة" data-en="Dipping mat installation"><span class="ar">اطلب الخدمة</span><span class="en">Request this</span></a></p>
+      </div>
+    </section>
+
+    <section id="more">
+      <h2><span class="ar">مهارات إضافية</span><span class="en">More I can deliver</span></h2>
+      <div class="row">
+        <h3><span class="ar">لوحات Excel تلقائية</span><span class="en">Automated Excel dashboards</span></h3>
+        <p><span class="ar">معادلات ولوحات مؤشرات تتحدث وحدها من بيانات الإنتاج.</span><span class="en">Formulas and dashboards that update themselves from production data.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تحليل بيانات الإنتاج</span><span class="en">Production data analysis</span></h3>
+        <p><span class="ar">البحث عن أسباب الهدر والتوقفات وعرضها بالرسوم البيانية.</span><span class="en">Finding the causes of waste and downtime and showing them in charts.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">توثيق برامج PLC</span><span class="en">PLC documentation</span></h3>
+        <p><span class="ar">جداول المداخل والمخارج وشرح منطق البرنامج لتسهيل الصيانة.</span><span class="en">I/O tables and program logic explained, so maintenance is easier.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">عروض ووثائق فنية</span><span class="en">Presentations and technical documents</span></h3>
+        <p><span class="ar">عروض تقديمية وأدلة تشغيل وتقارير بالعربية والإنجليزية.</span><span class="en">Presentations, operating guides and reports in Arabic and English.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">مواقع تعريفية</span><span class="en">Company websites</span></h3>
+        <p><span class="ar">مواقع بسيطة بالعربية والإنجليزية للمصانع والشركات الصغيرة.</span><span class="en">Simple Arabic and English websites for factories and small companies.</span></p>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2><span class="ar">أعمالي</span><span class="en">Selected work</span></h2>
+      <div class="row">
+        <h3><span class="ar">ماكينة تغليف كرات البسكويت</span><span class="en">Biscuit ball packaging machine</span></h3>
+        <div>
+          <p><span class="ar">الحساس يشغّل الماكينة بعد ثانيتين من وجود الإشارة ويوقفها بعد ثانيتين من غيابها، مع حالتي التشغيل والعطل.</span><span class="en">A sensor starts the machine after two seconds of signal and stops it two seconds after the signal drops, with Run and Fault states.</span></p>
+          <span class="stack">OpenPLC · Ladder</span>
+        </div>
+      </div>
+      <div class="row">
+        <h3><span class="ar">خط صب قوالب الشوكولا</span><span class="en">Chocolate mould casting line</span></h3>
+        <div>
+          <p><span class="ar">برنامج PLC لخط صب إيطالي (موديل 2020)، قيد التطوير.</span><span class="en">A PLC program for an Italian casting line (2020 model), in progress.</span></p>
+          <span class="stack">OpenPLC · Ladder</span>
+        </div>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تطبيق مخزون عربي</span><span class="en">Arabic inventory app</span></h3>
+        <div>
+          <p><span class="ar">دخول للموظفين والمدير، المخزون، طلبات الشراء، سجل الحركات، الإشعارات ورموز QR.</span><span class="en">Employee and admin login, inventory, purchase requests, movement log, notifications and QR codes.</span></p>
+          <span class="stack">React Native · Expo</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2><span class="ar">كيف أعمل</span><span class="en">How it works</span></h2>
+      <div class="row">
+        <h3><span class="ar">تصف لي ما تحتاجه</span><span class="en">Tell me what you need</span></h3>
+        <p><span class="ar">أرسل لي المشكلة أو الفكرة عبر واتساب أو البريد، ومعها ما لديك من صور أو ملفات.</span><span class="en">Send me the problem or idea by WhatsApp or email, with any photos or files you have.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">تستلم عرض سعر</span><span class="en">Get a quote</span></h3>
+        <p><span class="ar">أرد عليك بحل وعرض سعر واضح قبل أي عمل، فالسعر يعتمد على طبيعة العمل.</span><span class="en">I reply with a solution and a clear quote before any work starts. Pricing depends on the job.</span></p>
+      </div>
+      <div class="row">
+        <h3><span class="ar">أنفّذ وأسلّم</span><span class="en">I build and hand over</span></h3>
+        <p><span class="ar">أنفّذ وأختبر وأسلّمك العمل مع شرح لطريقة استخدامه.</span><span class="en">I build it, test it and hand it over with a walkthrough of how to use it.</span></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><span class="ar">لنتحدث</span><span class="en">Get in touch</span></h2>
+      <p style="margin:0 0 14px;color:var(--mute)"><span class="ar">عندك خط أو مخزن يحتاج ضبطاً؟ أرسل لي رسالة.</span><span class="en">Have a line or a store room that needs sorting out? Send me a message.</span></p>
+      <a class="cta" href="https://wa.me/963932761452"><span class="ar">راسلني على واتساب</span><span class="en">Message me on WhatsApp</span></a>
+      <p style="margin:18px 0 0"><span class="ar">أو عبر البريد:</span><span class="en">Or by email:</span> <a href="mailto:majde3214@gmail.com" style="color:var(--blue)"><bdi>majde3214@gmail.com</bdi></a></p>
+    </section>
+  </main>
+
+  <footer>© <span id="yr"></span> Majdy Othman</footer>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement, on=false;
+  var lad=document.getElementById('lad'), st=document.getElementById('state');
+  var txt={ar:{on:'المحرك يعمل',off:'المحرك متوقف'},en:{on:'Motor running',off:'Motor stopped'}};
+  function paint(){
+    lad.classList.toggle('on',on);
+    st.textContent=txt[root.lang][on?'on':'off'];
+  }
+  document.getElementById('start').onclick=function(){on=true;paint()};
+  document.getElementById('stop').onclick=function(){on=false;paint()};
+  var b=document.getElementById('lang');
+  function setLang(l){
+    root.lang=l; root.dir=l==='ar'?'rtl':'ltr';
+    b.textContent=l==='ar'?'English':'العربية';
+    document.title=l==='ar'?'مجدي عثمان – Majdy Othman':'Majdy Othman – مجدي عثمان';
+    paint();
+  }
+  b.onclick=function(){
+    var n=root.lang==='ar'?'en':'ar';
+    setLang(n);
+    try{localStorage.setItem('lang',n)}catch(e){}
+  };
+  var saved=null; try{saved=localStorage.getItem('lang')}catch(e){}
+  setLang(saved==='en'?'en':'ar');
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var rig=document.getElementById('rig'); rig.classList.add('on'); rig.classList.remove('on');
+})();
+</script>
+<script>
+(function(){
+  var r=document.documentElement;
+  function fix(){var ar=r.lang==='ar';document.querySelectorAll('.ask').forEach(function(a){var n=ar?a.dataset.ar:a.dataset.en;var m=ar?'مرحباً مجدي، أريد الاستفسار عن خدمة: '+n:'Hello Majdy, I would like to ask about: '+n;a.href='https://wa.me/963932761452?text='+encodeURIComponent(m)})}
+  fix();new MutationObserver(fix).observe(r,{attributes:true,attributeFilter:['lang']});
+  var s=document.getElementById('sens'),bar=document.querySelector('#bar i,.bar i'),lamp=document.getElementById('lamp'),o=document.getElementById('dstate'),t=null,out=false,sig=false;
+  var T={ar:{on:'الماكينة تعمل',off:'الماكينة متوقفة',w1:'انتظار ثانيتين للتشغيل…',w0:'انتظار ثانيتين للإيقاف…'},en:{on:'Machine running',off:'Machine stopped',w1:'Waiting two seconds to start…',w0:'Waiting two seconds to stop…'}};
+  function show(k){o.textContent=T[r.lang][k]}
+  function reset(){bar.style.transition='none';bar.style.width='0'}
+  function run(target){
+    clearTimeout(t);t=null;reset();
+    if(out===target){show(out?'on':'off');return}
+    void bar.offsetWidth;
+    bar.style.transition='width 2s linear';bar.style.width='100%';
+    show(target?'w1':'w0');
+    t=setTimeout(function(){t=null;out=target;lamp.classList.toggle('on',out);show(out?'on':'off');reset()},2000);
+  }
+  s.onclick=function(){sig=!sig;s.setAttribute('aria-pressed',sig);run(sig)};
+  show('off');
+  new MutationObserver(function(){show(t?(sig?'w1':'w0'):(out?'on':'off'))}).observe(r,{attributes:true,attributeFilter:['lang']});
+})();
+</script>
+</body>
+</html>
