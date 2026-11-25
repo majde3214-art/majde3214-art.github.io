@@ -100,12 +100,33 @@ h1,.tag,.rig{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
 .tgl[aria-pressed="true"]{box-shadow:0 0 0 3px color-mix(in srgb,var(--live) 50%,transparent)}
 .lamp{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--wire);margin-inline-end:8px;vertical-align:-1px;transition:background .25s,box-shadow .25s}
 .lamp.on{background:var(--live);box-shadow:0 0 12px var(--live)}
+html{scroll-behavior:smooth}
+::selection{background:var(--blue);color:#1a1306}
+h1 .ar,h1 .en{background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 38%,var(--blue) 70%,var(--live) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top{border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:26px;font-size:.95rem}
+.nav a{color:var(--mute);text-decoration:none;transition:color .2s}
+.nav a:hover{color:var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
+.chip{font-style:normal;border:1px solid var(--line);border-radius:999px;padding:4px 16px;font-size:.88rem;color:var(--mute);transition:border-color .2s,color .2s}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.row:hover{background:linear-gradient(90deg,transparent,rgba(212,175,90,.06),transparent)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.why div{border-top:2px solid var(--blue);padding-top:16px}
+.why h3{margin:0 0 6px;font-size:1.12rem;color:var(--blue)}
+.why p{margin:0;color:var(--mute)}
+.fab{position:fixed;inset-inline-end:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f0cf7a,#c9a24b);box-shadow:0 12px 30px -8px rgba(201,162,75,.8);transition:transform .2s}
+.fab:hover{transform:translateY(-3px)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding-top:24px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.nav{display:none}.why{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fab:hover{transform:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <span class="mark">Majdy Othman</span>
+    <nav class="nav" aria-label="Sections"><a href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a><a href="#work"><span class="ar">أعمالي</span><span class="en">Work</span></a><a href="#contact"><span class="ar">تواصل</span><span class="en">Contact</span></a></nav>
     <button class="lang" id="lang" type="button" aria-label="Switch language / تغيير اللغة">English</button>
   </header>
 
@@ -115,6 +136,8 @@ h1,.tag,.rig{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
       <span class="ar">برمجة PLC وتطبيقات مخازن لمصانع الأغذية.</span>
       <span class="en">PLC programming and inventory apps for food factories.</span>
     </p>
+
+    <div class="chips"><i class="chip">Ladder Logic</i><i class="chip">OpenPLC</i><i class="chip">Excel</i><i class="chip">React Native</i><i class="chip">QR</i></div>
 
     <div class="rig" id="rig">
       <div dir="ltr">
@@ -232,6 +255,15 @@ h1,.tag,.rig{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
       </div>
     </section>
 
+    <section id="why">
+      <h2><span class="ar">لماذا أنا</span><span class="en">Why work with me</span></h2>
+      <div class="why">
+        <div><h3><span class="ar">عربية أولاً</span><span class="en">Arabic first</span></h3><p><span class="ar">واجهات عربية واضحة لتطبيقاتك وتقاريرك، مع نسخة إنجليزية عند الحاجة.</span><span class="en">Clear Arabic interfaces for your apps and reports, with an English version when needed.</span></p></div>
+        <div><h3><span class="ar">تجربة قبل التركيب</span><span class="en">Tested before installed</span></h3><p><span class="ar">أختبر منطق PLC في المحاكاة قبل أن يصل إلى الماكينة.</span><span class="en">I test PLC logic in simulation before it reaches the machine.</span></p></div>
+        <div><h3><span class="ar">سعر واضح أولاً</span><span class="en">A clear quote first</span></h3><p><span class="ar">تعرف التكلفة قبل أن يبدأ أي عمل.</span><span class="en">You know the cost before any work starts.</span></p></div>
+      </div>
+    </section>
+
     <section id="how">
       <h2><span class="ar">كيف أعمل</span><span class="en">How it works</span></h2>
       <div class="row">
@@ -256,7 +288,10 @@ h1,.tag,.rig{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
     </section>
   </main>
 
-  <footer>© <span id="yr"></span> Majdy Othman</footer>
+  <footer><span>© <span id="yr"></span> Majdy Othman</span><a href="mailto:majde3214@gmail.com" style="color:inherit"><bdi>majde3214@gmail.com</bdi></a></footer>
+</div>
+<a class="fab" href="https://wa.me/963932761452" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="#1a1306" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg></a>
+<div hidden>
 </div>
 
 <script>
